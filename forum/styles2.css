@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; 
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Background color for the body */
+}
+
+.navbar .navbar-brand, 
+.navbar .nav > li > a {
+    font-size: 18px;
+    color: white;
+    font-family: 'Georgia', serif;
+}
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6px; /* Dikey hizalama */
+}
+
+.container {
+    width: 95%;
+    max-width: 800px;
+    height: 95vh;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow-y: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 700px; /* Fotoğrafın genişliği 700px ile sınırlandırıldı */
+    margin-bottom: 20px;
+}
+
+.photo {
+    width: 100%; /* Fotoğraf genişliği container'a uyacak şekilde ayarlandı */
+    height: 500px; /* Fotoğrafın yüksekliği artırıldı */
+    object-fit: cover; /* Fotoğrafın orantılı şekilde kesilmesi sağlandı */
+    border-radius: 10px; /* Fotoğraf kenarları yuvarlatıldı */
+}
+
+.overlay {
+    position: absolute;
+    top: 10px; /* Yazının fotoğrafın üst kısmında konumlanması için 10px yukarıda */
+}
+
+/* Navbar Right */
+.navbar-right {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+.navbar-header {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+}
+@media (max-width: 768px) {
+    .navbar-right {
+    position: absolute;
+    right: 10px;
+    top: 2px ;
+}
+.navbar-header {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+}
+
+    .navbar .dropdown-menu {
+    background-color: white !important; /* Beyaz arka plan */
+    opacity: 1 !important; /* Tam opaklık */
+    border-radius: 5px; /* Köşeleri yuvarlatabiliriz */
+    border: 1px solid black !important; /* İnce siyah çerçeve, !important ile daha güçlü yapıyoruz */
+    box-shadow: none;
+}
+
+.navbar .dropdown-menu li a {
+    color: white; /* Yazı rengini koyu yapabilirsiniz */
+    font-size: 16px;
+
+}
+
+.navbar .dropdown-menu li a:hover {
+    background-color: #f4f4f4; /* Hover etkisi */
+}
+
+    .container {
+        width: 90%; /* Increase container width on small screens */
+        padding: 20px; /* Adjust padding for better spacing */
+    }
+
+    .photo {
+        height: 400px; /* Adjust photo height for smaller screens */
+    }
+
+    .navbar .navbar-brand, 
+    .navbar .nav > li > a {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .navbar-right {
+        position: absolute;
+        right: 10px;
+        top: 2px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-header {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+}
+
+    .navbar .dropdown-menu {
+    background-color: white !important; /* Beyaz arka plan */
+    opacity: 1 !important; /* Tam opaklık */
+    border-radius: 5px; /* İsteğe bağlı: köşeleri yuvarlatabilirsiniz */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeli efekt */
+    border-radius: 5px; /* Köşeleri yuvarlatabiliriz */
+        border: 5px solid black;
+}
+
+.navbar .dropdown-menu li a {
+    color: #38003c; /* Yazı rengini koyu yapabilirsiniz */
+    font-size: 16px;
+}
+
+.navbar .dropdown-menu li a:hover {
+    background-color: #f4f4f4; /* Hover etkisi */
+}
+
+    .container {
+        width: 100%; /* Full width for very small screens */
+        padding: 15px; /* Adjust padding for very small screens */
+    }
+
+    .photo {
+        height: 300px; /* Further reduce photo height for mobile devices */
+    }
+
+    .navbar .navbar-brand, 
+    .navbar .nav > li > a {
+        font-size: 14px; /* Even smaller font size */
+    }
+
+    .navbar-right {
+        position: absolute;
+        right: 10px;
+        top: 2px;
+        width: auto;
+    }
+
+    .photo-container {
+        max-width: 100%; /* Remove width limit for smaller devices */
+    }
+}

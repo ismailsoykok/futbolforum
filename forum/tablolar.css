@@ -1,0 +1,119 @@
+.scoreboard-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/* Her bir puan durumu kutusu */
+.scoreboard {
+      width: 15%; /* Küçük kutu boyutu */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-color: #091442;
+    border-width: 5px;
+}
+
+/* Başlık kısmı */
+.scoreboard-header {
+    background-color: #A6A6A6;
+    color: white;
+    padding: 8px;
+    font-size: 1.5rem; /* 18px yerine rem kullanımı */
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-family: Garamond, serif;
+}
+
+/* İçerik kısmı */
+.scoreboard-body {
+    flex-grow: 1;
+    overflow-y: auto; /* Kaydırılabilir içerik */
+    margin-top: 10px;
+    max-height: 400px; /* En fazla 400px yüksekliğinde */
+}
+
+/* Takım bilgileri */
+.team {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.team:last-child {
+    border-bottom: none;
+}
+
+.team-name {
+    width: 60%;
+    font-size: 14px;
+    text-align: left; /* Takım ismi sola hizalanacak */
+    padding-left: 10px; /* Soldan biraz boşluk */
+    white-space: nowrap; /* Takım isminin kaymasını engeller */
+    object-fit: contain;
+}
+
+.team-points, .team-wins, .team-losses, .team-goals-for, .team-goals-against {
+    color: #007bff;
+    text-align: center;
+}
+
+/* Resim göstermek için kutular */
+.scoreboard img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Başlık satırındaki sütunlar */
+.scoreboard-header-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+/* Başlık satırındaki sütunlar */
+.scoreboard-header-column {
+    width: 60%; /* 'Takım' başlığını daha geniş yapıyoruz, 5 kat daha geniş */
+    text-align: left;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+/* Her bir takım için sütunlar */
+.team-column {
+    width: 8%; /* Diğer sütunlar sabit genişlikte olacak ve 5 kat daha küçük */
+    text-align: center;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .scoreboard {
+        width: 45%; /* Küçük ekranlarda daha geniş */
+    }
+}
+
+@media (max-width: 480px) {
+    .scoreboard {
+        width: 80%; /* Çok küçük ekranlar için tam genişlik */
+        margin: 0 auto;
+    }
+}
